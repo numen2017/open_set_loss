@@ -7,6 +7,7 @@ import pandas as pd
 import importlib
 
 import torch
+torch.cuda.set_device(1)
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.optim import lr_scheduler
@@ -50,7 +51,7 @@ parser.add_argument('--gpu', type=str, default='0')
 parser.add_argument('--seed', type=int, default=0)
 parser.add_argument('--use-cpu', action='store_true')
 parser.add_argument('--save-dir', type=str, default='../log')
-parser.add_argument('--loss', type=str, default='ARPLoss')
+parser.add_argument('--loss', type=str, default='GCPLoss')
 parser.add_argument('--eval', action='store_true', help="Eval", default=False)
 parser.add_argument('--cs', action='store_true', help="Confusing Sample", default=False)
 

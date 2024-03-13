@@ -25,7 +25,9 @@ from models import gan
 from utils import Logger, save_networks, save_GAN, load_networks, mkdir_if_missing
 from core import train, train_cs, test
 
-parser = argparse.ArgumentParser("ARPLoss")
+
+
+parser = argparse.ArgumentParser("GCPLoss")
 
 # dataset
 parser.add_argument('--dataroot', type=str, default='./data')
@@ -43,7 +45,7 @@ parser.add_argument('--gan_lr', type=float, default=0.0002, help="learning rate 
 parser.add_argument('--max-epoch', type=int, default=100)
 parser.add_argument('--stepsize', type=int, default=30)
 parser.add_argument('--temp', type=float, default=1.0, help="temp")
-parser.add_argument('--loss', type=str, default='ARPLoss')
+parser.add_argument('--loss', type=str, default='GCPLoss')
 
 # model
 parser.add_argument('--weight-pl', type=float, default=0.1, help="weight for RPL loss")
