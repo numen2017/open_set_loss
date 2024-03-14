@@ -7,7 +7,6 @@ import pandas as pd
 import importlib
 
 import torch
-torch.cuda.set_device(1)
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.optim import lr_scheduler
@@ -29,7 +28,7 @@ parser.add_argument('--outf', type=str, default='./log')
 parser.add_argument('--out-num', type=int, default=50, help='For CIFAR100')
 
 # optimization
-parser.add_argument('--batch-size', type=int, default=64)
+parser.add_argument('--batch-size', type=int, default=16)
 parser.add_argument('--lr', type=float, default=0.1, help="learning rate for model")
 parser.add_argument('--gan_lr', type=float, default=0.0002, help="learning rate for gan")
 parser.add_argument('--max-epoch', type=int, default=100)
