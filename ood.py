@@ -25,7 +25,7 @@ from models import gan
 from utils import Logger, save_networks, save_GAN, load_networks, mkdir_if_missing
 from core import train, train_cs, test
 
-parser = argparse.ArgumentParser("ARPLoss")
+parser = argparse.ArgumentParser("GCPLoss")
 
 # dataset
 parser.add_argument('--dataroot', type=str, default='./data')
